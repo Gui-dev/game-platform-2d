@@ -1,6 +1,7 @@
-res://levels/world_01.tscn
+res://enemies/enemy.tscn
 res://shaders/movement_clouds.gdshader
-res://prefabs/coin.tscn
-res://scripts/coin.gd
+res://scripts/enemy.gd
+res://levels/world_01.tscn
 res://actors/player.tscn
 res://prefabs/moving_platform.tscn
+res://prefabs/coin.tscn
