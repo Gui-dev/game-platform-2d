@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://qe73ytu4553k"]
+[gd_scene load_steps=14 format=3 uid="uid://qe73ytu4553k"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_g0mp5"]
 [ext_resource type="Texture2D" uid="uid://cto6x1s7xjce0" path="res://assets/Sprite Pack 2/2 - Mr. Mochi/Idle (32 x 32).png" id="2_flpp3"]
@@ -71,9 +71,12 @@ animations = [{
 "speed": 8.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wn44j"]
+size = Vector2(16, 12)
+
 [node name="player" type="CharacterBody2D"]
 position = Vector2(0, -16)
-collision_mask = 2
+collision_mask = 22
 script = ExtResource("1_g0mp5")
 
 [node name="collision" type="CollisionShape2D" parent="."]
@@ -81,13 +84,21 @@ visible = false
 position = Vector2(0, 8)
 shape = SubResource("RectangleShape2D_isqdj")
 
-[node name="camera" type="Camera2D" parent="."]
-visible = false
-limit_left = -10
-editor_draw_limits = true
-
 [node name="animated" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_x20mo")
 animation = &"idle"
 
 [node name="animator" type="AnimationPlayer" parent="."]
+
+[node name="hurtbox" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 4
+
+[node name="collision" type="CollisionShape2D" parent="hurtbox"]
+position = Vector2(0, 6)
+shape = SubResource("RectangleShape2D_wn44j")
+debug_color = Color(0.980392, 0, 0.380392, 0.419608)
+
+[node name="remote" type="RemoteTransform2D" parent="."]
+
+[connection signal="body_entered" from="hurtbox" to="." method="_on_hurtbox_body_entered"]

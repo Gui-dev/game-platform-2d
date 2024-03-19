@@ -7,6 +7,7 @@ var is_jumping := false
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 @onready var animation := $animated as AnimatedSprite2D
+@onready var remote_transform := $remote as RemoteTransform2D
 
 
 func _physics_process(delta):
@@ -35,3 +36,13 @@ func _physics_process(delta):
     velocity.x = move_toward(velocity.x, 0, SPEED)
     animation.play("idle")
   move_and_slide()
+
+
+func _on_hurtbox_body_entered(body: Node2D) -> void:
+  if body.is_in_group("enemies"):
+    queue_free()
+
+
+func follow_camera(camera: Camera2D) -> void:
+  var camera_path = camera.get_path()
+  remote_transform.remote_path = camera_path

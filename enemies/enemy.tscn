@@ -1,12 +1,14 @@
-[gd_scene load_steps=11 format=3 uid="uid://ddc41iyqs05k5"]
+[gd_scene load_steps=13 format=3 uid="uid://ddc41iyqs05k5"]
 
 [ext_resource type="Script" path="res://scripts/enemy.gd" id="1_6dgdk"]
 [ext_resource type="Texture2D" uid="uid://bqvcoflotc7me" path="res://assets/Sprite Pack 2/4 - Robo Pumpkin/Walking (16 x 16).png" id="1_qvrgc"]
 [ext_resource type="Texture2D" uid="uid://b6mnoqs7g5dkm" path="res://assets/Sprite Pack 2/4 - Robo Pumpkin/Hurt (16 x 16).png" id="2_vmm7o"]
 [ext_resource type="Texture2D" uid="uid://b7rjj5gkng4k7" path="res://assets/Sprite Pack 2/4 - Robo Pumpkin/Standing (16 x 16).png" id="3_e28tv"]
+[ext_resource type="PackedScene" uid="uid://dwrdw6cq76oqi" path="res://prefabs/hitbox.tscn" id="5_f4jyg"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_ra2d6"]
-radius = 6.0
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pdjwa"]
+radius = 4.0
+height = 12.0
 
 [sub_resource type="Animation" id="Animation_e1q46"]
 length = 0.001
@@ -50,7 +52,6 @@ tracks/2/keys = {
 [sub_resource type="Animation" id="Animation_cwmec"]
 resource_name = "hurt"
 length = 0.1
-loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -91,7 +92,6 @@ tracks/2/keys = {
 [sub_resource type="Animation" id="Animation_hcc86"]
 resource_name = "standing"
 length = 0.1
-loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -178,7 +178,10 @@ _data = {
 "walk": SubResource("Animation_txy6k")
 }
 
-[node name="enemy" type="CharacterBody2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_te7pd"]
+size = Vector2(8, 1.5)
+
+[node name="enemy" type="CharacterBody2D" groups=["enemies"]]
 collision_layer = 4
 collision_mask = 2
 script = ExtResource("1_6dgdk")
@@ -189,8 +192,9 @@ texture = ExtResource("1_qvrgc")
 hframes = 2
 
 [node name="collision" type="CollisionShape2D" parent="."]
-position = Vector2(0, -7)
-shape = SubResource("CircleShape2D_ra2d6")
+position = Vector2(0, -4)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_pdjwa")
 
 [node name="animation" type="AnimationPlayer" parent="."]
 libraries = {
@@ -203,3 +207,11 @@ speed_scale = 0.5
 position = Vector2(0, -7)
 target_position = Vector2(-7, 0)
 collision_mask = 6
+
+[node name="hitbox" parent="." instance=ExtResource("5_f4jyg")]
+
+[node name="collision" type="CollisionShape2D" parent="hitbox"]
+position = Vector2(0, -11.25)
+shape = SubResource("RectangleShape2D_te7pd")
+
+[connection signal="animation_finished" from="animation" to="." method="_on_animation_finished"]
