@@ -47,17 +47,15 @@ func _physics_process(delta):
   move_and_slide()
 
 
-func _on_hurtbox_body_entered(body: Node2D) -> void:
+func _on_hurtbox_body_entered(_body: Node2D) -> void:
   #if body.is_in_group("enemies"):
     #queue_free()
   if player_life < 0:
     queue_free()
   else:
     if ray_right.is_colliding():
-      print("COLIDIU_RIGHT")
       take_damage(Vector2(-200, -200))
     elif ray_left.is_colliding():
-      print("COLIDIU_LEFT")
       take_damage(Vector2(200, -200))
 
 
@@ -74,3 +72,14 @@ func take_damage(knockback_force := Vector2.ZERO, duration := 0.25):
     knockback_tween.parallel().tween_property(self, "knockback_vector", Vector2.ZERO, duration)
     animation.modulate = Color(1, 0, 0, 1)
     knockback_tween.parallel().tween_property(animation, "modulate", Color(1, 1, 1, 1), duration)
+
+
+func _input(event) -> void:
+  if event is InputEventScreenTouch:
+    if Input.is_action_just_pressed("ui_accept") and is_on_floor():
+      velocity.y = JUMP_VELOCITY
+      is_jumping = true
+    elif is_on_floor():
+      is_jumping = false
+
+

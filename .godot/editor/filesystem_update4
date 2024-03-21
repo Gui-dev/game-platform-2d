@@ -1,8 +1,8 @@
-res://actors/player.tscn
-res://shaders/movement_clouds.gdshader
-res://scripts/player.gd
 res://levels/world_01.tscn
+res://shaders/movement_clouds.gdshader
+res://actors/player.tscn
 res://prefabs/moving_platform.tscn
 res://prefabs/coin.tscn
 res://enemies/enemy.tscn
 res://prefabs/hitbox.tscn
+res://scripts/player.gd
