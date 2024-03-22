@@ -380,7 +380,7 @@ editor_draw_limits = true
 [node name="controls" type="CanvasLayer" parent="."]
 
 [node name="ui_left" type="TouchScreenButton" parent="controls"]
-position = Vector2(19, 122)
+position = Vector2(20, 123)
 texture_normal = ExtResource("14_qfhu2")
 texture_pressed = ExtResource("15_kr6ij")
 action = "ui_left"

@@ -1,7 +1,8 @@
-[gd_scene load_steps=14 format=3 uid="uid://qe73ytu4553k"]
+[gd_scene load_steps=15 format=3 uid="uid://qe73ytu4553k"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_g0mp5"]
 [ext_resource type="Texture2D" uid="uid://cto6x1s7xjce0" path="res://assets/Sprite Pack 2/2 - Mr. Mochi/Idle (32 x 32).png" id="2_flpp3"]
+[ext_resource type="Texture2D" uid="uid://bonue2784hblu" path="res://assets/Sprite Pack 2/2 - Mr. Mochi/Hurt (32 x 32).png" id="2_molkk"]
 [ext_resource type="Texture2D" uid="uid://bkugxaxdhd2pt" path="res://assets/Sprite Pack 2/2 - Mr. Mochi/Running (32 x 32).png" id="3_i143p"]
 [ext_resource type="Texture2D" uid="uid://cfikoyeuuet8r" path="res://assets/Sprite Pack 2/2 - Mr. Mochi/Jumping (32 x 32).png" id="3_yquut"]
 
@@ -31,6 +32,14 @@ region = Rect2(96, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_x20mo"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_molkk")
+}],
+"loop": true,
+"name": &"hurt",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_vdxgs")
@@ -81,7 +90,8 @@ script = ExtResource("1_g0mp5")
 
 [node name="animated" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_x20mo")
-animation = &"idle"
+animation = &"hurt"
+autoplay = "idle"
 
 [node name="animator" type="AnimationPlayer" parent="."]
 
