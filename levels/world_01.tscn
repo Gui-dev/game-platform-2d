@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://ducrfu7slbqet"]
+[gd_scene load_steps=28 format=3 uid="uid://ducrfu7slbqet"]
 
 [ext_resource type="Texture2D" uid="uid://bxpqna6m1rk5h" path="res://assets/Seasonal Tilesets/1 - Grassland/Terrain (16 x 16).png" id="1_6gxq8"]
 [ext_resource type="Script" path="res://scripts/world_01.gd" id="1_xrs4v"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://bspq63gfhxqmf" path="res://assets/Seasonal Tilesets/1 - Grassland/Background parts/5 - Sky_color.png" id="4_f77tb"]
 [ext_resource type="PackedScene" uid="uid://ddc41iyqs05k5" path="res://enemies/enemy.tscn" id="5_33txv"]
 [ext_resource type="Texture2D" uid="uid://dgwxcka6fu81g" path="res://assets/Seasonal Tilesets/1 - Grassland/Background parts/4 - Cloud_cover_2.png" id="5_dbtxx"]
+[ext_resource type="PackedScene" uid="uid://jjmdrcchhmpp" path="res://prefabs/break_box.tscn" id="6_3rly3"]
 [ext_resource type="Shader" path="res://shaders/movement_clouds.gdshader" id="6_qx01m"]
 [ext_resource type="Texture2D" uid="uid://c4d5b3mejv0hc" path="res://assets/Seasonal Tilesets/1 - Grassland/Background parts/3 - Cloud_cover_1.png" id="6_u8mxq"]
 [ext_resource type="Texture2D" uid="uid://d036co65kl4fn" path="res://assets/Seasonal Tilesets/1 - Grassland/Background parts/2 - Hills.png" id="7_1esue"]
@@ -308,6 +309,11 @@ position = Vector2(144, 156)
 [node name="moving_platform2" parent="platfomrs" instance=ExtResource("10_lu3wo")]
 position = Vector2(96, 212)
 move_horizontal = false
+
+[node name="blocks" type="Node2D" parent="."]
+
+[node name="break_box" parent="blocks" instance=ExtResource("6_3rly3")]
+position = Vector2(263, 129)
 
 [node name="enemies" type="Node2D" parent="."]
 
