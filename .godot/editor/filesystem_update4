@@ -1,7 +1,7 @@
 res://levels/world_01.tscn
 res://shaders/movement_clouds.gdshader
+res://scripts/warning_sign.gd
 res://actors/player.tscn
-res://enemies/enemy.tscn
-res://prefabs/falling_platform.tscn
-res://scripts/falling_platform.gd
-res://scripts/player.gd
+res://prefabs/dialog_container.tscn
+res://scripts/dialog_container.gd
+res://scripts/singletons/dialog_manager.gd
