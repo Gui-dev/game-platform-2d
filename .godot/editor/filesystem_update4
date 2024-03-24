@@ -3,5 +3,7 @@ res://shaders/movement_clouds.gdshader
 res://actors/player.tscn
 res://enemies/enemy.tscn
 res://prefabs/break_box.tscn
+res://prefabs/coin.tscn
+res://prefabs/coin_rigid.tscn
 res://scripts/break_box.gd
 res://scripts/player.gd

@@ -315,6 +315,17 @@ move_horizontal = false
 [node name="break_box" parent="blocks" instance=ExtResource("6_3rly3")]
 position = Vector2(263, 129)
 
+[node name="break_box2" parent="blocks" instance=ExtResource("6_3rly3")]
+position = Vector2(410, 118)
+hitpoints = 1
+
+[node name="break_box3" parent="blocks" instance=ExtResource("6_3rly3")]
+position = Vector2(426, 118)
+
+[node name="break_box4" parent="blocks" instance=ExtResource("6_3rly3")]
+position = Vector2(441, 118)
+hitpoints = 1
+
 [node name="enemies" type="Node2D" parent="."]
 
 [node name="enemy" parent="enemies" instance=ExtResource("5_33txv")]

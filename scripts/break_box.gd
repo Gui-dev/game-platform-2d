@@ -2,10 +2,12 @@ extends CharacterBody2D
 
 
 const box_pieces = preload("res://prefabs/box_pieces.tscn")
+const coin_rigid_instance = preload("res://prefabs/coin_rigid.tscn")
 @export var impulse := 200
 @export var pieces: PackedStringArray
 @export var hitpoints := 3
 @onready var animation_player := $animation as AnimationPlayer
+@onready var spawn_coin = $spawn_coin as Marker2D
 
 
 func break_sprite() -> void:
@@ -18,3 +20,8 @@ func break_sprite() -> void:
   queue_free()
 
 
+func create_coin() -> void:
+  var coin = coin_rigid_instance.instantiate()
+  get_parent().call_deferred("add_child", coin)
+  coin.global_position = spawn_coin.global_position
+  coin.apply_impulse(Vector2(randi_range(-50, 50), -150))
