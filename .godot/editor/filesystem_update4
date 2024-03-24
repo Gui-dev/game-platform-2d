@@ -2,8 +2,6 @@ res://levels/world_01.tscn
 res://shaders/movement_clouds.gdshader
 res://actors/player.tscn
 res://enemies/enemy.tscn
-res://prefabs/break_box.tscn
-res://prefabs/coin.tscn
-res://prefabs/coin_rigid.tscn
-res://scripts/break_box.gd
+res://prefabs/falling_platform.tscn
+res://scripts/falling_platform.gd
 res://scripts/player.gd

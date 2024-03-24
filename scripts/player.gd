@@ -43,6 +43,11 @@ func _physics_process(delta):
     
   _set_state()
   move_and_slide()
+  
+  for platforms in get_slide_collision_count():
+    var collision = get_slide_collision(platforms)
+    if collision.get_collider().has_method("has_colleded_with"):
+      collision.get_collider().has_colleded_with(collision, self)
 
 
 func _on_hurtbox_body_entered(_body: Node2D) -> void:
