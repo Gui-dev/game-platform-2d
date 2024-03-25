@@ -1,7 +1,7 @@
 res://levels/world_01.tscn
 res://shaders/movement_clouds.gdshader
-res://scripts/warning_sign.gd
 res://actors/player.tscn
-res://prefabs/dialog_container.tscn
-res://scripts/dialog_container.gd
-res://scripts/singletons/dialog_manager.gd
+res://prefabs/coin_rigid.tscn
+res://prefabs/spikes_area.tscn
+res://scripts/spikes_area.gd
+res://scripts/player.gd
