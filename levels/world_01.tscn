@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://ducrfu7slbqet"]
+[gd_scene load_steps=34 format=3 uid="uid://ducrfu7slbqet"]
 
 [ext_resource type="Texture2D" uid="uid://bxpqna6m1rk5h" path="res://assets/Seasonal Tilesets/1 - Grassland/Terrain (16 x 16).png" id="1_6gxq8"]
 [ext_resource type="Script" path="res://scripts/world_01.gd" id="1_xrs4v"]
@@ -24,6 +24,7 @@
 [ext_resource type="Texture2D" uid="uid://dswoubv5k41xw" path="res://assets/controls/ui_buttons_arrow_up_PRESSED.png" id="19_ttw6i"]
 [ext_resource type="Script" path="res://scripts/warning_sign.gd" id="22_1xtpm"]
 [ext_resource type="Texture2D" uid="uid://crj28uibc0tqn" path="res://assets/Mini FX, Items & UI/Mini UI/Speech_Emotes (16 x 16).png" id="23_fkmnf"]
+[ext_resource type="PackedScene" uid="uid://bjwcwfwmxu7rl" path="res://prefabs/hud.tscn" id="25_d77g0"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_whyto"]
 tile_data = PackedInt32Array(0, 65538, 1)
@@ -369,6 +370,7 @@ shape = SubResource("RectangleShape2D_matid")
 
 [node name="enemy" parent="enemies" instance=ExtResource("5_33txv")]
 position = Vector2(451, 188)
+enemy_score = 300
 
 [node name="enemy2" parent="enemies" instance=ExtResource("5_33txv")]
 position = Vector2(645, 219)
@@ -455,5 +457,7 @@ texture_normal = ExtResource("18_bnvep")
 texture_pressed = ExtResource("19_ttw6i")
 action = "ui_accept"
 visibility_mode = 1
+
+[node name="HUD" parent="." instance=ExtResource("25_d77g0")]
 
 [editable path="spikes/spikes_area"]

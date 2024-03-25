@@ -7,6 +7,7 @@ var direction := -1
 @onready var wall_detector := $wall_detector as RayCast2D
 @onready var texture := $texture as Sprite2D
 @onready var animation := $animation as AnimationPlayer
+@export var enemy_score := 100
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -33,4 +34,5 @@ func _physics_process(delta: float) -> void:
 
 func _on_animation_finished(anim_name: StringName) -> void:
   if anim_name == "hurt":
+    Globals.score += enemy_score
     queue_free()

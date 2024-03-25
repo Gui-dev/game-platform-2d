@@ -1,8 +1,8 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1711348599
+::res://::1711353504
 icon.svg::CompressedTexture2D::5593776692883468714::1708817028::1708817047::1::::<><>::
-::res://actors/::1711323501
-player.tscn::PackedScene::1133273246082985530::1711323501::0::1::::<><>::res://scripts/player.gd<>uid://cto6x1s7xjce0::::res://assets/Sprite Pack 2/2 - Mr. Mochi/Idle (32 x 32).png<>uid://bonue2784hblu::::res://assets/Sprite Pack 2/2 - Mr. Mochi/Hurt (32 x 32).png<>uid://bkugxaxdhd2pt::::res://assets/Sprite Pack 2/2 - Mr. Mochi/Running (32 x 32).png<>uid://cfikoyeuuet8r::::res://assets/Sprite Pack 2/2 - Mr. Mochi/Jumping (32 x 32).png
+::res://actors/::1711351470
+player.tscn::PackedScene::1133273246082985530::1711351470::0::1::::<><>::res://scripts/player.gd<>uid://cto6x1s7xjce0::::res://assets/Sprite Pack 2/2 - Mr. Mochi/Idle (32 x 32).png<>uid://bonue2784hblu::::res://assets/Sprite Pack 2/2 - Mr. Mochi/Hurt (32 x 32).png<>uid://bkugxaxdhd2pt::::res://assets/Sprite Pack 2/2 - Mr. Mochi/Running (32 x 32).png<>uid://cfikoyeuuet8r::::res://assets/Sprite Pack 2/2 - Mr. Mochi/Jumping (32 x 32).png
 ::res://assets/::1711312082
 ::res://assets/controls/::1710973402
 ui_buttons_arrow_left_NORMAL.png::CompressedTexture2D::3046336937524761237::1686081881::1710973402::1::::<><>::
@@ -13,7 +13,7 @@ ui_buttons_arrow_up_NORMAL.png::CompressedTexture2D::6480579329159705992::168608
 ui_buttons_arrow_up_PRESSED.png::CompressedTexture2D::8468963387271869204::1686082917::1710973402::1::::<><>::
 ::res://assets/fonts/::1711312092
 RevMiniPixel.ttf::FontFile::4439900732948811669::1530660326::1711312092::1::::<><>::
-::res://assets/Mini FX, Items & UI/::1708817910
+::res://assets/Mini FX, Items & UI/::1711352192
 LICENSE.txt::TextFile::-1::1593868726::0::1::::<><>::
 ::res://assets/Mini FX, Items & UI/Common Pick-ups/::1708818038
 Coin (16 x 16).png::CompressedTexture2D::4181951406110352334::1594132264::1708818038::1::::<><>::
@@ -91,7 +91,7 @@ Winter_entities (16 x 16).png::CompressedTexture2D::6859578023913961917::1594735
 2 - Smaller_mountains.png::CompressedTexture2D::7354452643482215295::1594670896::1708818038::1::::<><>::
 3 - Big_mountain_BG.png::CompressedTexture2D::1347025181898716656::1594670910::1708818038::1::::<><>::
 _Complete_static_BG_(288 x 208).png::CompressedTexture2D::4883502289550759973::1594670818::1708818038::1::::<><>::
-::res://assets/Seasonal Tilesets/5 - Misc. universal tiles/::1711347383
+::res://assets/Seasonal Tilesets/5 - Misc. universal tiles/::1711353288
 Blocks (16 x 16).png::CompressedTexture2D::7348207690793610372::1594736310::1708818038::1::::<><>::
 Bubbling_Oil_frames (16 x 32).png::CompressedTexture2D::3230590918021378315::1594736532::1708818038::1::::<><>::
 Flowers (16 x 16).png::CompressedTexture2D::9121304175193238112::1594736990::1708818038::1::::<><>::
@@ -106,11 +106,18 @@ brick-piece-01.png::CompressedTexture2D::3832486301448779401::1687449964::171117
 brick-piece-02.png::CompressedTexture2D::8137257905681837852::1687449964::1711172505::1::::<><>::
 brick-piece-03.png::CompressedTexture2D::972720187397569488::1687449964::1711172505::1::::<><>::
 brick-piece-04.png::CompressedTexture2D::1290007608375897259::1687449964::1711172505::1::::<><>::
+::res://assets/Seasonal Tilesets/5 - Misc. universal tiles/coin-sprites/::1711352221
+00_Coin-Sprites.png::CompressedTexture2D::7592022836763861651::1691012308::1711352221::1::::<><>::
+01_Coin-Sprites.png::CompressedTexture2D::4111998555426789420::1691012407::1711352221::1::::<><>::
+02_Coin-Sprites.png::CompressedTexture2D::8132863911515125871::1691012426::1711352221::1::::<><>::
+03_Coin-Sprites.png::CompressedTexture2D::3690271251580292210::1691012459::1711352221::1::::<><>::
 ::res://assets/Seasonal Tilesets/5 - Misc. universal tiles/dialog/::1711311551
 Dialog_Box(16 x 16).png::CompressedTexture2D::7798010560664436265::1689601216::1711311551::1::::<><>::
 ::res://assets/Seasonal Tilesets/5 - Misc. universal tiles/falling_platform/::1711261830
 falling-platform-brown.png::CompressedTexture2D::1846026657986258349::1689076119::1711261830::1::::<><>::
 falling-platform-green.png::CompressedTexture2D::6638541598907408451::1689076140::1711261830::1::::<><>::
+::res://assets/Seasonal Tilesets/5 - Misc. universal tiles/life/::1711353302
+Life-Counter-Icon.png::CompressedTexture2D::3435378670578295701::1691089317::1711353302::1::::<><>::
 ::res://assets/Seasonal Tilesets/5 - Misc. universal tiles/spikes/::1711347395
 Spike.png::CompressedTexture2D::1229648141482093147::1569417024::1711347395::1::::<><>::
 ::res://assets/Sprite Pack 2/::1710795457
@@ -160,19 +167,20 @@ Movement_(Flip_image_back_and_forth) (32 x 32).png::CompressedTexture2D::5397767
 Reaching_to_Pinch (32 x 32).png::CompressedTexture2D::753019828759236930::1592409764::1708818038::1::::<><>::
 ::res://enemies/::1711266560
 enemy.tscn::PackedScene::7375765018947420242::1711266560::0::1::::<><>::res://scripts/enemy.gd<>uid://bqvcoflotc7me::::res://assets/Sprite Pack 2/4 - Robo Pumpkin/Walking (16 x 16).png<>uid://b6mnoqs7g5dkm::::res://assets/Sprite Pack 2/4 - Robo Pumpkin/Hurt (16 x 16).png<>uid://b7rjj5gkng4k7::::res://assets/Sprite Pack 2/4 - Robo Pumpkin/Standing (16 x 16).png<>uid://dwrdw6cq76oqi::::res://prefabs/hitbox.tscn
-::res://levels/::1711348537
-world_01.tscn::PackedScene::8568209897927964243::1711348537::0::1::::<><>::uid://bxpqna6m1rk5h::::res://assets/Seasonal Tilesets/1 - Grassland/Terrain (16 x 16).png<>res://scripts/world_01.gd<>uid://uwp8xpf6xn1p::::res://assets/Seasonal Tilesets/1 - Grassland/Grassland_entities (16 x 16).png<>uid://qe73ytu4553k::::res://actors/player.tscn<>uid://de1aoepjwde2k::::res://prefabs/coin.tscn<>uid://bspq63gfhxqmf::::res://assets/Seasonal Tilesets/1 - Grassland/Background parts/5 - Sky_color.png<>uid://ddc41iyqs05k5::::res://enemies/enemy.tscn<>uid://dgwxcka6fu81g::::res://assets/Seasonal Tilesets/1 - Grassland/Background parts/4 - Cloud_cover_2.png<>uid://jjmdrcchhmpp::::res://prefabs/break_box.tscn<>uid://bgt1p3qvc8gv8::::res://prefabs/falling_platform.tscn<>res://shaders/movement_clouds.gdshader<>uid://c4d5b3mejv0hc::::res://assets/Seasonal Tilesets/1 - Grassland/Background parts/3 - Cloud_cover_1.png<>uid://d036co65kl4fn::::res://assets/Seasonal Tilesets/1 - Grassland/Background parts/2 - Hills.png<>uid://c12x8wndmswth::::res://assets/Seasonal Tilesets/1 - Grassland/Background parts/1 - Foreground_scenery.png<>uid://dyl81ky74w7ym::::res://prefabs/moving_platform.tscn<>uid://bjnwyvjk78eo8::::res://assets/controls/ui_buttons_arrow_left_NORMAL.png<>uid://cbxlecriqha4b::::res://assets/controls/ui_buttons_arrow_left_PRESSED.png<>uid://cvt6oh7xvoas4::::res://assets/controls/ui_buttons_arrow_right_NORMAL.png<>uid://t371k5060jt5::::res://assets/controls/ui_buttons_arrow_right_PRESSED.png<>uid://cyligvdsnnsai::::res://assets/controls/ui_buttons_arrow_up_NORMAL.png<>uid://dswoubv5k41xw::::res://assets/controls/ui_buttons_arrow_up_PRESSED.png<>res://scripts/warning_sign.gd<>uid://crj28uibc0tqn::::res://assets/Mini FX, Items & UI/Mini UI/Speech_Emotes (16 x 16).png
-::res://prefabs/::1711348514
+::res://levels/::1711352492
+world_01.tscn::PackedScene::8568209897927964243::1711352492::0::1::::<><>::uid://bxpqna6m1rk5h::::res://assets/Seasonal Tilesets/1 - Grassland/Terrain (16 x 16).png<>res://scripts/world_01.gd<>uid://uwp8xpf6xn1p::::res://assets/Seasonal Tilesets/1 - Grassland/Grassland_entities (16 x 16).png<>uid://qe73ytu4553k::::res://actors/player.tscn<>uid://de1aoepjwde2k::::res://prefabs/coin.tscn<>uid://bspq63gfhxqmf::::res://assets/Seasonal Tilesets/1 - Grassland/Background parts/5 - Sky_color.png<>uid://ddc41iyqs05k5::::res://enemies/enemy.tscn<>uid://dgwxcka6fu81g::::res://assets/Seasonal Tilesets/1 - Grassland/Background parts/4 - Cloud_cover_2.png<>uid://jjmdrcchhmpp::::res://prefabs/break_box.tscn<>uid://bgt1p3qvc8gv8::::res://prefabs/falling_platform.tscn<>res://shaders/movement_clouds.gdshader<>uid://c4d5b3mejv0hc::::res://assets/Seasonal Tilesets/1 - Grassland/Background parts/3 - Cloud_cover_1.png<>uid://d036co65kl4fn::::res://assets/Seasonal Tilesets/1 - Grassland/Background parts/2 - Hills.png<>uid://uqp3kkvek5qd::::res://prefabs/spikes_area.tscn<>uid://c12x8wndmswth::::res://assets/Seasonal Tilesets/1 - Grassland/Background parts/1 - Foreground_scenery.png<>uid://dyl81ky74w7ym::::res://prefabs/moving_platform.tscn<>uid://bjnwyvjk78eo8::::res://assets/controls/ui_buttons_arrow_left_NORMAL.png<>uid://cbxlecriqha4b::::res://assets/controls/ui_buttons_arrow_left_PRESSED.png<>uid://cvt6oh7xvoas4::::res://assets/controls/ui_buttons_arrow_right_NORMAL.png<>uid://t371k5060jt5::::res://assets/controls/ui_buttons_arrow_right_PRESSED.png<>uid://cyligvdsnnsai::::res://assets/controls/ui_buttons_arrow_up_NORMAL.png<>uid://dswoubv5k41xw::::res://assets/controls/ui_buttons_arrow_up_PRESSED.png<>res://scripts/warning_sign.gd<>uid://crj28uibc0tqn::::res://assets/Mini FX, Items & UI/Mini UI/Speech_Emotes (16 x 16).png<>uid://bjwcwfwmxu7rl::::res://prefabs/hud.tscn
+::res://prefabs/::1711353424
 box_pieces.tscn::PackedScene::4829247974249915540::1711172979::0::1::::<><>::res://scripts/box_pieces.gd
 break_box.tscn::PackedScene::651013849910817701::1711261370::0::1::::<><>::uid://dcxr53t5yl56w::::res://assets/Seasonal Tilesets/5 - Misc. universal tiles/Blocks (16 x 16).png<>res://scripts/break_box.gd
 coin.tscn::PackedScene::7493716482055563912::1711260830::0::1::::<><>::res://scripts/coin.gd<>uid://b0t1em0fsfp8i::::res://assets/Mini FX, Items & UI/Common Pick-ups/Coin (16 x 16).png<>uid://m68jglfw1w2a::::res://assets/Mini FX, Items & UI/Effects/Yellow_Sparkle (16 x 16).png
-coin_rigid.tscn::PackedScene::8460161817883270378::1711347139::0::1::::<><>::uid://de1aoepjwde2k::::res://prefabs/coin.tscn<>res://scripts/coin_rigid.gd
+coin_rigid.tscn::PackedScene::8460161817883270378::1711351471::0::1::::<><>::uid://de1aoepjwde2k::::res://prefabs/coin.tscn<>res://scripts/coin_rigid.gd
 dialog_container.tscn::PackedScene::3788807392938247940::1711323501::0::1::::<><>::res://scripts/dialog_container.gd<>uid://djdodhnmg2d2p::::res://assets/Seasonal Tilesets/5 - Misc. universal tiles/dialog/Dialog_Box(16 x 16).png<>uid://b4iyrs7l7xmvd::::res://assets/fonts/RevMiniPixel.ttf
 falling_platform.tscn::PackedScene::2848383847897728587::1711266560::0::1::::<><>::uid://1kh13qtx6u50::::res://assets/Seasonal Tilesets/5 - Misc. universal tiles/falling_platform/falling-platform-brown.png<>res://scripts/falling_platform.gd
 hitbox.tscn::PackedScene::8738734103463666904::1711083832::0::1::::<><>::res://scripts/hitbox.gd
+hud.tscn::PackedScene::3063697605655380573::1711353424::0::1::::<><>::uid://dgfvrh8yg3sch::::res://assets/Seasonal Tilesets/5 - Misc. universal tiles/coin-sprites/00_Coin-Sprites.png<>uid://byt5ar30rr4lk::::res://assets/Seasonal Tilesets/5 - Misc. universal tiles/coin-sprites/01_Coin-Sprites.png<>uid://dn4vcy65s8hmt::::res://assets/Seasonal Tilesets/5 - Misc. universal tiles/coin-sprites/02_Coin-Sprites.png<>uid://bstuh08nhmt8u::::res://assets/Seasonal Tilesets/5 - Misc. universal tiles/coin-sprites/03_Coin-Sprites.png<>uid://b4iyrs7l7xmvd::::res://assets/fonts/RevMiniPixel.ttf<>uid://bo7egju7vcp46::::res://assets/Seasonal Tilesets/5 - Misc. universal tiles/life/Life-Counter-Icon.png
 moving_platform.tscn::PackedScene::8868553108891955772::1711083832::0::1::::<><>::res://scripts/moving_platform.gd<>uid://dcxr53t5yl56w::::res://assets/Seasonal Tilesets/5 - Misc. universal tiles/Blocks (16 x 16).png
-spikes_area.tscn::PackedScene::1437768215587901259::1711348514::0::1::::<><>::uid://rrwei1j4qxtj::::res://assets/Seasonal Tilesets/5 - Misc. universal tiles/spikes/Spike.png<>res://scripts/spikes_area.gd
-::res://scripts/::1711348504
+spikes_area.tscn::PackedScene::1437768215587901259::1711351471::0::1::::<><>::uid://rrwei1j4qxtj::::res://assets/Seasonal Tilesets/5 - Misc. universal tiles/spikes/Spike.png<>res://scripts/spikes_area.gd
+::res://scripts/::1711351456
 box_pieces.gd::GDScript::-1::1711172979::0::1::::<>RigidBody2D<>::
 break_box.gd::GDScript::-1::1711261262::0::1::::<>CharacterBody2D<>::
 coin.gd::GDScript::-1::1710747684::0::1::::<>Area2D<>::
@@ -182,11 +190,12 @@ enemy.gd::GDScript::-1::1710808817::0::1::::<>CharacterBody2D<>::
 falling_platform.gd::GDScript::-1::1711266555::0::1::::<>AnimatableBody2D<>::
 hitbox.gd::GDScript::-1::1710808750::0::1::::<>Area2D<>::
 moving_platform.gd::GDScript::-1::1710747684::0::1::::<>Node2D<>::
-player.gd::GDScript::-1::1711265278::0::1::::<>CharacterBody2D<>::
-spikes_area.gd::GDScript::-1::1711348504::0::1::::<>Area2D<>::
+player.gd::GDScript::-1::1711351456::0::1::::<>CharacterBody2D<>::
+spikes_area.gd::GDScript::-1::1711351161::0::1::::<>Area2D<>::
 warning_sign.gd::GDScript::-1::1711320504::0::1::::<>Node2D<>::
 world_01.gd::GDScript::-1::1710809759::0::1::::<>Node2D<>::
-::res://scripts/singletons/::1711321589
+::res://scripts/singletons/::1711351789
 dialog_manager.gd::GDScript::-1::1711321589::0::1::::<>Node<>::
-::res://shaders/::1711348537
-movement_clouds.gdshader::Shader::-1::1711348537::0::1::::<><>::
+globals.gd::GDScript::-1::1711351789::0::1::::<>Node<>::
+::res://shaders/::1711353424
+movement_clouds.gdshader::Shader::-1::1711353424::0::1::::<><>::
