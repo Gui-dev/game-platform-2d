@@ -461,3 +461,4 @@ visibility_mode = 1
 [node name="HUD" parent="." instance=ExtResource("25_d77g0")]
 
 [editable path="spikes/spikes_area"]
+[editable path="HUD"]

@@ -29,6 +29,10 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_5iqmr")
+default_seconds = 30
+
+[node name="clock_timer" type="Timer" parent="control"]
+autostart = true
 
 [node name="container" type="MarginContainer" parent="control"]
 layout_mode = 1
@@ -132,3 +136,5 @@ theme_override_fonts/font = ExtResource("5_8y7sg")
 theme_override_font_sizes/font_size = 8
 text = "3"
 vertical_alignment = 1
+
+[connection signal="timeout" from="control/clock_timer" to="control" method="_on_clock_timer_timeout"]

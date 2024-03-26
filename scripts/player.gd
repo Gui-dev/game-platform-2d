@@ -9,12 +9,11 @@ var is_jumping := false
 var knockback_vector := Vector2.ZERO
 var is_hurted := false
 var direction
-@export var player_life := 10
-
 @onready var animation := $animated as AnimatedSprite2D
 @onready var remote_transform := $remote as RemoteTransform2D
 @onready var ray_right = $ray_right as RayCast2D
 @onready var ray_left = $ray_left as RayCast2D
+signal player_has_died()
 
 
 func _physics_process(delta):
@@ -63,10 +62,11 @@ func follow_camera(camera: Camera2D) -> void:
 
 
 func take_damage(knockback_force := Vector2.ZERO, duration := 0.25):
-  if player_life > 0:
-    player_life -= 1
+  if Globals.player_life > 0:
+    Globals.player_life -= 1
   else:
     queue_free()
+    emit_signal("player_has_died")
   
   if knockback_force != Vector2.ZERO:
     knockback_vector = knockback_force

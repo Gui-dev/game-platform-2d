@@ -1,9 +1,7 @@
-res://prefabs/hud.tscn
+res://levels/world_01.tscn
 res://shaders/movement_clouds.gdshader
 res://scripts/hud_manager.gd
-res://levels/world_01.tscn
+res://scripts/world_01.gd
+res://prefabs/hud.tscn
 res://actors/player.tscn
-res://prefabs/coin_rigid.tscn
-res://scripts/coin.gd
 res://prefabs/coin.tscn
-res://scripts/enemy.gd
