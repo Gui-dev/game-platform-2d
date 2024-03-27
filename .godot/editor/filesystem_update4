@@ -1,7 +1,6 @@
-res://levels/world_01.tscn
+res://enemies/base_patrol.tscn
 res://shaders/movement_clouds.gdshader
-res://scripts/hud_manager.gd
-res://scripts/world_01.gd
-res://prefabs/hud.tscn
+res://scripts/rocket_cherry.gd
+res://scripts/hitbox.gd
+res://levels/world_01.tscn
 res://actors/player.tscn
-res://prefabs/coin.tscn
