@@ -1,6 +1,9 @@
-res://enemies/base_patrol.tscn
+res://enemies/cherry.tscn
 res://shaders/movement_clouds.gdshader
+res://scripts/cherry.gd
+res://enemies/enemy.tscn
+res://scripts/enemy.gd
+res://enemies/base_patrol.tscn
 res://scripts/rocket_cherry.gd
-res://scripts/hitbox.gd
 res://levels/world_01.tscn
 res://actors/player.tscn

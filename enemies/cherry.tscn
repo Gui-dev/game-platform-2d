@@ -1,0 +1,63 @@
+[gd_scene load_steps=10 format=3 uid="uid://bsfp2m2m4ul8r"]
+
+[ext_resource type="Texture2D" uid="uid://cqcha5f2ies1a" path="res://assets/Sprite Pack 2/7 - Rocket Cherry/Hopping (16 x 32).png" id="1_3n07y"]
+[ext_resource type="Texture2D" uid="uid://bwshkydnqe0f1" path="res://assets/Sprite Pack 2/7 - Rocket Cherry/Hurt (16 x 32).png" id="1_ggeau"]
+[ext_resource type="Script" path="res://scripts/cherry.gd" id="1_mj3wj"]
+[ext_resource type="PackedScene" uid="uid://dwrdw6cq76oqi" path="res://prefabs/hitbox.tscn" id="3_isd3g"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_di6sb"]
+size = Vector2(12, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lcpgk"]
+atlas = ExtResource("1_3n07y")
+region = Rect2(0, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lr2xv"]
+atlas = ExtResource("1_3n07y")
+region = Rect2(16, 0, 16, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lj4q8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lcpgk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lr2xv")
+}],
+"loop": true,
+"name": &"hopping",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_ggeau")
+}],
+"loop": false,
+"name": &"hurt",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mofel"]
+size = Vector2(12, 1)
+
+[node name="cherry" type="CharacterBody2D"]
+collision_layer = 4
+collision_mask = 3
+script = ExtResource("1_mj3wj")
+
+[node name="collision" type="CollisionShape2D" parent="."]
+position = Vector2(0, 10)
+shape = SubResource("RectangleShape2D_di6sb")
+
+[node name="animation" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_lj4q8")
+animation = &"hurt"
+autoplay = "hopping"
+
+[node name="hitbox" parent="." instance=ExtResource("3_isd3g")]
+
+[node name="collision" type="CollisionShape2D" parent="hitbox"]
+position = Vector2(0, 3.5)
+shape = SubResource("RectangleShape2D_mofel")
+debug_color = Color(0.984314, 0.0980392, 0.2, 0.419608)
