@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://ducrfu7slbqet"]
+[gd_scene load_steps=41 format=3 uid="uid://ducrfu7slbqet"]
 
 [ext_resource type="Texture2D" uid="uid://bxpqna6m1rk5h" path="res://assets/Seasonal Tilesets/1 - Grassland/Terrain (16 x 16).png" id="1_6gxq8"]
 [ext_resource type="Script" path="res://scripts/world_01.gd" id="1_xrs4v"]
@@ -29,6 +29,7 @@
 [ext_resource type="Script" path="res://scripts/warning_sign.gd" id="22_1xtpm"]
 [ext_resource type="Texture2D" uid="uid://crj28uibc0tqn" path="res://assets/Mini FX, Items & UI/Mini UI/Speech_Emotes (16 x 16).png" id="23_fkmnf"]
 [ext_resource type="PackedScene" uid="uid://bjwcwfwmxu7rl" path="res://prefabs/hud.tscn" id="25_d77g0"]
+[ext_resource type="PackedScene" uid="uid://dhvdmjs6f1awu" path="res://prefabs/menu.tscn" id="30_37m7y"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_whyto"]
 tile_data = PackedInt32Array(0, 65538, 1)
@@ -404,7 +405,7 @@ shape = SubResource("RectangleShape2D_matid")
 [node name="checkpoints" type="Node2D" parent="."]
 
 [node name="checkpoint" parent="checkpoints" instance=ExtResource("13_hd565")]
-position = Vector2(654, 212)
+position = Vector2(1272, 244)
 
 [node name="enemies" type="Node2D" parent="."]
 
@@ -502,6 +503,8 @@ action = "ui_accept"
 visibility_mode = 1
 
 [node name="HUD" parent="." instance=ExtResource("25_d77g0")]
+
+[node name="menu" parent="." instance=ExtResource("30_37m7y")]
 
 [editable path="spikes/spikes_area"]
 [editable path="HUD"]

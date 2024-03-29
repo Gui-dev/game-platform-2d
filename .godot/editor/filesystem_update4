@@ -1,6 +1,6 @@
 res://levels/world_01.tscn
 res://shaders/movement_clouds.gdshader
-res://prefabs/checkpoint.tscn
 res://actors/player.tscn
-res://scripts/checkpoint.gd
-res://scripts/world_01.gd
+res://prefabs/checkpoint.tscn
+res://prefabs/menu.tscn
+res://scripts/menu.gd
