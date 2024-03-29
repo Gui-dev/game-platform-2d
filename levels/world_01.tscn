@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://ducrfu7slbqet"]
+[gd_scene load_steps=40 format=3 uid="uid://ducrfu7slbqet"]
 
 [ext_resource type="Texture2D" uid="uid://bxpqna6m1rk5h" path="res://assets/Seasonal Tilesets/1 - Grassland/Terrain (16 x 16).png" id="1_6gxq8"]
 [ext_resource type="Script" path="res://scripts/world_01.gd" id="1_xrs4v"]
@@ -18,6 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://uqp3kkvek5qd" path="res://prefabs/spikes_area.tscn" id="8_16cnu"]
 [ext_resource type="Texture2D" uid="uid://c12x8wndmswth" path="res://assets/Seasonal Tilesets/1 - Grassland/Background parts/1 - Foreground_scenery.png" id="8_3063w"]
 [ext_resource type="PackedScene" uid="uid://dyl81ky74w7ym" path="res://prefabs/moving_platform.tscn" id="10_lu3wo"]
+[ext_resource type="PackedScene" uid="uid://c3hdghrkbd6ky" path="res://prefabs/checkpoint.tscn" id="13_hd565"]
 [ext_resource type="Texture2D" uid="uid://bjnwyvjk78eo8" path="res://assets/controls/ui_buttons_arrow_left_NORMAL.png" id="14_qfhu2"]
 [ext_resource type="PackedScene" uid="uid://7eyd4rcbvfnq" path="res://enemies/base_patrol.tscn" id="14_ta4de"]
 [ext_resource type="Texture2D" uid="uid://cbxlecriqha4b" path="res://assets/controls/ui_buttons_arrow_left_PRESSED.png" id="15_kr6ij"]
@@ -399,6 +400,11 @@ collision_layer = 2
 
 [node name="collision" type="CollisionShape2D" parent="warning_sign/area_sign"]
 shape = SubResource("RectangleShape2D_matid")
+
+[node name="checkpoints" type="Node2D" parent="."]
+
+[node name="checkpoint" parent="checkpoints" instance=ExtResource("13_hd565")]
+position = Vector2(654, 212)
 
 [node name="enemies" type="Node2D" parent="."]
 

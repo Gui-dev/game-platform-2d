@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dwrdw6cq76oqi" path="res://prefabs/hitbox.tscn" id="3_isd3g"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_di6sb"]
-size = Vector2(12, 8)
+size = Vector2(14, 10)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lcpgk"]
 atlas = ExtResource("1_3n07y")
@@ -43,11 +43,11 @@ size = Vector2(12, 1)
 
 [node name="cherry" type="CharacterBody2D"]
 collision_layer = 4
-collision_mask = 3
+collision_mask = 2
 script = ExtResource("1_mj3wj")
 
 [node name="collision" type="CollisionShape2D" parent="."]
-position = Vector2(0, 10)
+position = Vector2(0, 11)
 shape = SubResource("RectangleShape2D_di6sb")
 
 [node name="animation" type="AnimatedSprite2D" parent="."]
