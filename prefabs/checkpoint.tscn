@@ -95,7 +95,7 @@ script = ExtResource("1_1loyr")
 [node name="collision" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_214l7")
 
-[node name="animation" type="AnimatedSprite2D" parent="."]
+[node name="texture" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_r74df")
 animation = &"unchecked"
 autoplay = "unchecked"
@@ -104,4 +104,4 @@ autoplay = "unchecked"
 position = Vector2(0, -17)
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
-[connection signal="animation_finished" from="animation" to="." method="_on__animation_finished"]
+[connection signal="animation_finished" from="texture" to="." method="_on__animation_finished"]

@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://jmcpqlsxgkec"]
+
+[ext_resource type="Shader" path="res://shaders/transition.gdshader" id="1_5ympk"]
+[ext_resource type="Script" path="res://scripts/transition.gd" id="1_paw4r"]
+[ext_resource type="Script" path="res://scripts/background.gd" id="2_5bi8d"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_m6yb2"]
+shader = ExtResource("1_5ympk")
+shader_parameter/lines = 10.0
+shader_parameter/threshold = 0.0
+shader_parameter/line_color_a = Color(1, 1, 1, 1)
+shader_parameter/line_color_b = Color(0, 0, 0, 1)
+
+[node name="transition" type="CanvasLayer"]
+script = ExtResource("1_paw4r")
+
+[node name="background" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_m6yb2")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_5bi8d")

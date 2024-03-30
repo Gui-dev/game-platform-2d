@@ -1,6 +1,10 @@
 res://levels/world_01.tscn
 res://shaders/movement_clouds.gdshader
+res://shaders/transition.gdshader
 res://actors/player.tscn
 res://prefabs/checkpoint.tscn
-res://prefabs/menu.tscn
-res://scripts/menu.gd
+res://prefabs/goal.tscn
+res://prefabs/transition.tscn
+res://levels/world_02.tscn
+res://scripts/goal.gd
+res://scripts/transition.gd

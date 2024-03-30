@@ -2,13 +2,13 @@ extends Area2D
 
 
 var is_active: bool = false
-@onready var animation = $animation
+@onready var texture = $texture
 @onready var marker_position = $marker_position
 
 
 func activate_checkpoint() -> void:
   Globals.current_checkpoint = marker_position
-  animation.play("raising")
+  texture.play("raising")
   is_active = true
 
 
@@ -19,5 +19,5 @@ func _on_body_entered(body: CharacterBody2D) -> void:
 
 
 func _on__animation_finished():
-  if animation.animation == "raising":
-    animation.play("checked")
+  if texture.animation == "raising":
+    texture.play("checked")
