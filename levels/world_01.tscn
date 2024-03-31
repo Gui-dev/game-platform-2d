@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=3 uid="uid://ducrfu7slbqet"]
+[gd_scene load_steps=45 format=3 uid="uid://ducrfu7slbqet"]
 
 [ext_resource type="Texture2D" uid="uid://bxpqna6m1rk5h" path="res://assets/Seasonal Tilesets/1 - Grassland/Terrain (16 x 16).png" id="1_6gxq8"]
 [ext_resource type="Script" path="res://scripts/world_01.gd" id="1_xrs4v"]
@@ -33,6 +33,7 @@
 [ext_resource type="PackedScene" uid="uid://bjwcwfwmxu7rl" path="res://prefabs/hud.tscn" id="25_d77g0"]
 [ext_resource type="PackedScene" uid="uid://dhvdmjs6f1awu" path="res://prefabs/menu.tscn" id="30_37m7y"]
 [ext_resource type="PackedScene" uid="uid://jmcpqlsxgkec" path="res://prefabs/transition.tscn" id="32_x3c41"]
+[ext_resource type="AudioStream" uid="uid://crpol7txlvffw" path="res://assets/sounds/bg-sound.wav" id="34_4om4i"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_whyto"]
 tile_data = PackedInt32Array(0, 65538, 1)
@@ -516,6 +517,10 @@ visibility_mode = 1
 [node name="menu" parent="." instance=ExtResource("30_37m7y")]
 
 [node name="transition" parent="." instance=ExtResource("32_x3c41")]
+
+[node name="bg_music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("34_4om4i")
+autoplay = true
 
 [editable path="spikes/spikes_area"]
 [editable path="HUD"]

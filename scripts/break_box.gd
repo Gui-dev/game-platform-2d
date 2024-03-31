@@ -8,6 +8,7 @@ const coin_rigid_instance = preload("res://prefabs/coin_rigid.tscn")
 @export var hitpoints := 3
 @onready var animation_player := $animation as AnimationPlayer
 @onready var spawn_coin = $spawn_coin as Marker2D
+@onready var hit_block = $hit_block as AudioStreamPlayer
 
 
 func break_sprite() -> void:

@@ -13,6 +13,8 @@ var direction
 @onready var remote_transform := $remote as RemoteTransform2D
 @onready var ray_right = $ray_right as RayCast2D
 @onready var ray_left = $ray_left as RayCast2D
+@onready var jump_sfx = $jump_sfx as AudioStreamPlayer
+@onready var destroy_sfx = preload("res://prefabs/destroy_sfx.tscn")
 signal player_has_died()
 
 
@@ -25,6 +27,7 @@ func _physics_process(delta):
   if Input.is_action_just_pressed("ui_accept") and is_on_floor():
     velocity.y = JUMP_VELOCITY
     is_jumping = true
+    jump_sfx.play()
   elif is_on_floor():
     is_jumping = false
 
@@ -80,6 +83,14 @@ func take_damage(knockback_force := Vector2.ZERO, duration := 0.25):
   is_hurted = false
 
 
+func play_destroy_sfx() -> void:
+  var sound_sfx = destroy_sfx.instantiate()
+  get_parent().add_child(sound_sfx)
+  sound_sfx.play()
+  await sound_sfx.finished
+  sound_sfx.queue_free()
+
+
 func _input(event) -> void:
   if event is InputEventScreenTouch:
     if Input.is_action_just_pressed("ui_accept") and is_on_floor():
@@ -108,6 +119,8 @@ func _on_head_collider_body_entered(body: CharacterBody2D) -> void:
     body.hitpoints -= 1
     if body.hitpoints < 0:
       body.break_sprite()
+      play_destroy_sfx()
     else:
       body.animation_player.play("hit")
+      body.hit_block.play(0.1)
       body.create_coin()
