@@ -522,5 +522,8 @@ visibility_mode = 1
 stream = ExtResource("34_4om4i")
 autoplay = true
 
+[node name="player_start_position" type="Marker2D" parent="."]
+position = Vector2(24, 200)
+
 [editable path="spikes/spikes_area"]
 [editable path="HUD"]

@@ -7,3 +7,5 @@ res://actors/player.tscn
 res://levels/world_01.tscn
 res://prefabs/coin.tscn
 res://prefabs/break_box.tscn
+res://scripts/world_01.gd
+res://scripts/singletons/globals.gd
