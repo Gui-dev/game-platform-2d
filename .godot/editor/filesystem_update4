@@ -1,11 +1,8 @@
+res://start/title_screen.tscn
 res://shaders/movement_clouds.gdshader
 res://shaders/transition.gdshader
-res://prefabs/destroy_sfx.tscn
-res://scripts/break_box.gd
-res://scripts/player.gd
-res://actors/player.tscn
+res://themes/default_buttons_theme.tres
 res://levels/world_01.tscn
-res://prefabs/coin.tscn
-res://prefabs/break_box.tscn
-res://scripts/world_01.gd
-res://scripts/singletons/globals.gd
+res://actors/player.tscn
+res://prefabs/hud.tscn
+res://scripts/title_screen.gd

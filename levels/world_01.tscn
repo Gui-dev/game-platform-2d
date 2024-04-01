@@ -486,6 +486,7 @@ texture = ExtResource("8_3063w")
 centered = false
 
 [node name="camera" type="Camera2D" parent="."]
+zoom = Vector2(2, 2)
 limit_left = -10
 editor_draw_limits = true
 

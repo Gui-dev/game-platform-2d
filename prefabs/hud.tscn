@@ -54,13 +54,14 @@ size_flags_vertical = 0
 [node name="coins_icon" type="TextureRect" parent="control/container/coins_container"]
 layout_mode = 2
 texture = SubResource("AnimatedTexture_3ykhf")
+expand_mode = 2
 
 [node name="coins_counter" type="Label" parent="control/container/coins_container"]
 layout_mode = 2
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 4
+theme_override_constants/outline_size = 8
 theme_override_fonts/font = ExtResource("5_8y7sg")
-theme_override_font_sizes/font_size = 8
+theme_override_font_sizes/font_size = 24
 text = "0000"
 vertical_alignment = 1
 
@@ -72,18 +73,18 @@ size_flags_vertical = 0
 [node name="timer_label" type="Label" parent="control/container/timer_container"]
 layout_mode = 2
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 4
+theme_override_constants/outline_size = 8
 theme_override_fonts/font = ExtResource("5_8y7sg")
-theme_override_font_sizes/font_size = 8
+theme_override_font_sizes/font_size = 16
 text = "TIME:"
 vertical_alignment = 1
 
 [node name="timer_counter" type="Label" parent="control/container/timer_container"]
 layout_mode = 2
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 4
+theme_override_constants/outline_size = 8
 theme_override_fonts/font = ExtResource("5_8y7sg")
-theme_override_font_sizes/font_size = 8
+theme_override_font_sizes/font_size = 24
 text = "00:00"
 vertical_alignment = 1
 
@@ -95,18 +96,18 @@ size_flags_vertical = 0
 [node name="score_label" type="Label" parent="control/container/score_container"]
 layout_mode = 2
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 4
+theme_override_constants/outline_size = 8
 theme_override_fonts/font = ExtResource("5_8y7sg")
-theme_override_font_sizes/font_size = 8
+theme_override_font_sizes/font_size = 16
 text = "SCORE:"
 vertical_alignment = 1
 
 [node name="score_counter" type="Label" parent="control/container/score_container"]
 layout_mode = 2
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 4
+theme_override_constants/outline_size = 8
 theme_override_fonts/font = ExtResource("5_8y7sg")
-theme_override_font_sizes/font_size = 8
+theme_override_font_sizes/font_size = 24
 text = "000000"
 vertical_alignment = 1
 
@@ -118,22 +119,23 @@ size_flags_vertical = 8
 [node name="life_icon" type="TextureRect" parent="control/container/life_container"]
 layout_mode = 2
 texture = ExtResource("6_sh4wn")
+expand_mode = 2
 
 [node name="life_separator" type="Label" parent="control/container/life_container"]
 layout_mode = 2
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 4
+theme_override_constants/outline_size = 8
 theme_override_fonts/font = ExtResource("5_8y7sg")
-theme_override_font_sizes/font_size = 8
+theme_override_font_sizes/font_size = 16
 text = "x"
 vertical_alignment = 1
 
 [node name="life_counter" type="Label" parent="control/container/life_container"]
 layout_mode = 2
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 4
+theme_override_constants/outline_size = 8
 theme_override_fonts/font = ExtResource("5_8y7sg")
-theme_override_font_sizes/font_size = 8
+theme_override_font_sizes/font_size = 24
 text = "3"
 vertical_alignment = 1
 
