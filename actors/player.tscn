@@ -85,7 +85,7 @@ size = Vector2(12, 12)
 size = Vector2(16, 12)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vtghc"]
-size = Vector2(14, 5)
+size = Vector2(7, 2)
 
 [node name="player" type="CharacterBody2D"]
 position = Vector2(0, -16)
@@ -133,6 +133,7 @@ collision_layer = 0
 collision_mask = 64
 
 [node name="head_collision" type="CollisionShape2D" parent="head_collider"]
+position = Vector2(0, 0.25)
 shape = SubResource("RectangleShape2D_vtghc")
 
 [node name="jump_sfx" type="AudioStreamPlayer" parent="."]

@@ -515,10 +515,6 @@ visibility_mode = 1
 
 [node name="HUD" parent="." instance=ExtResource("25_d77g0")]
 
-[node name="control" parent="HUD" index="0"]
-default_minutes = 0
-default_seconds = 10
-
 [node name="menu" parent="." instance=ExtResource("30_37m7y")]
 
 [node name="transition" parent="." instance=ExtResource("32_x3c41")]

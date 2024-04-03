@@ -1,10 +1,6 @@
-res://screens/game_over_screen.tscn
+res://actors/player.tscn
 res://shaders/movement_clouds.gdshader
 res://shaders/transition.gdshader
-res://themes/default_buttons_theme.tres
-res://scripts/game_over_screen.gd
+res://scripts/hitbox.gd
 res://levels/world_01.tscn
-res://scripts/world_01.gd
-res://actors/player.tscn
-res://screens/title_screen.tscn
-res://scripts/title_screen.gd
+res://scripts/player.gd
