@@ -28,7 +28,8 @@ func reload_game() -> void:
   Globals.player_life = 3
   Globals.respawn_player()
   
+  
 func game_over() -> void:
-  get_tree().reload_current_scene()
+  get_tree().change_scene_to_file("res://screens/game_over_screen.tscn")
 
 

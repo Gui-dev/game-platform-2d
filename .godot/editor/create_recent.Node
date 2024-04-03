@@ -1,12 +1,12 @@
 AnimationPlayer
-TextureRect
-Button
 VBoxContainer
+Button
+TextureRect
+ColorRect
 HBoxContainer
 MarginContainer
 Marker2D
 AudioStreamPlayer
-ColorRect
 CanvasLayer
 AnimatedSprite2D
 CollisionShape2D

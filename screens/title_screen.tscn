@@ -1,11 +1,50 @@
 [gd_scene load_steps=10 format=3 uid="uid://cwnkkkpivyyjg"]
 
-[ext_resource type="Script" path="res://scripts/title_screen.gd" id="1_edd8b"]
-[ext_resource type="Texture2D" uid="uid://bywwmhy17645y" path="res://assets/title-screen/title-screen.jpg" id="1_jtbh7"]
-[ext_resource type="PackedScene" uid="uid://ducrfu7slbqet" path="res://levels/world_01.tscn" id="2_a5hyp"]
-[ext_resource type="Texture2D" uid="uid://d1v8m8lu6j243" path="res://assets/title-screen/game_logo.png" id="2_sj53g"]
-[ext_resource type="Texture2D" uid="uid://cfikoyeuuet8r" path="res://assets/Sprite Pack 2/2 - Mr. Mochi/Jumping (32 x 32).png" id="2_wfnig"]
-[ext_resource type="Theme" uid="uid://1avb5qx6lg1h" path="res://themes/default_buttons_theme.tres" id="3_3rox7"]
+[ext_resource type="Script" path="res://scripts/title_screen.gd" id="1_qkbqe"]
+[ext_resource type="PackedScene" uid="uid://ducrfu7slbqet" path="res://levels/world_01.tscn" id="2_yfjnp"]
+[ext_resource type="Texture2D" uid="uid://bywwmhy17645y" path="res://assets/screen/title-screen.jpg" id="3_bol4o"]
+[ext_resource type="Texture2D" uid="uid://d1v8m8lu6j243" path="res://assets/screen/game_logo.png" id="4_ecp4u"]
+[ext_resource type="Theme" uid="uid://1avb5qx6lg1h" path="res://themes/default_buttons_theme.tres" id="5_s5qbx"]
+[ext_resource type="Texture2D" uid="uid://cfikoyeuuet8r" path="res://assets/Sprite Pack 2/2 - Mr. Mochi/Jumping (32 x 32).png" id="6_fy47p"]
+
+[sub_resource type="Animation" id="Animation_7na67"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("background:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("container:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("container/container_horizontal/player_image:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
 
 [sub_resource type="Animation" id="Animation_18p4f"]
 resource_name = "reveal"
@@ -47,45 +86,6 @@ tracks/2/keys = {
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
 
-[sub_resource type="Animation" id="Animation_7na67"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("background:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("container:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0, 0)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("container/container_horizontal/player_image:modulate")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_itkn0"]
 _data = {
 "RESET": SubResource("Animation_7na67"),
@@ -99,8 +99,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_edd8b")
-change_scene = ExtResource("2_a5hyp")
+script = ExtResource("1_qkbqe")
+change_scene = ExtResource("2_yfjnp")
 
 [node name="background" type="TextureRect" parent="."]
 layout_mode = 2
@@ -108,14 +108,20 @@ offset_right = 640.0
 offset_bottom = 320.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_jtbh7")
+texture = ExtResource("3_bol4o")
 expand_mode = 2
 
 [node name="container" type="MarginContainer" parent="."]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -320.0
+offset_top = -160.0
+offset_right = 100.0
+offset_bottom = 96.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/margin_top = 20
@@ -123,35 +129,35 @@ theme_override_constants/margin_bottom = 20
 
 [node name="container_horizontal" type="HBoxContainer" parent="container"]
 layout_mode = 2
-size_flags_horizontal = 4
 
 [node name="container_vertical" type="VBoxContainer" parent="container/container_horizontal"]
 layout_mode = 2
-size_flags_horizontal = 4
-theme_override_constants/separation = 10
+size_flags_horizontal = 0
+size_flags_vertical = 8
+theme_override_constants/separation = 15
 
 [node name="logo" type="TextureRect" parent="container/container_horizontal/container_vertical"]
 layout_mode = 2
-texture = ExtResource("2_sj53g")
+texture = ExtResource("4_ecp4u")
 
 [node name="start_button" type="Button" parent="container/container_horizontal/container_vertical"]
 layout_mode = 2
-theme = ExtResource("3_3rox7")
+theme = ExtResource("5_s5qbx")
 text = "START"
 
 [node name="credits_button" type="Button" parent="container/container_horizontal/container_vertical"]
 layout_mode = 2
-theme = ExtResource("3_3rox7")
+theme = ExtResource("5_s5qbx")
 text = "CREDITS"
 
 [node name="quit_button" type="Button" parent="container/container_horizontal/container_vertical"]
 layout_mode = 2
-theme = ExtResource("3_3rox7")
+theme = ExtResource("5_s5qbx")
 text = "QUIT GAME"
 
 [node name="player_image" type="TextureRect" parent="container/container_horizontal"]
 layout_mode = 2
-texture = ExtResource("2_wfnig")
+texture = ExtResource("6_fy47p")
 expand_mode = 2
 
 [node name="animation_player" type="AnimationPlayer" parent="."]
