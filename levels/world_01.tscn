@@ -419,8 +419,9 @@ next_level_scene = ExtResource("15_5jhl7")
 
 [node name="enemies" type="Node2D" parent="."]
 
-[node name="trex" parent="enemies" instance=ExtResource("16_kd2d1")]
-position = Vector2(1560, 257)
+[node name="trex" parent="enemies" node_paths=PackedStringArray("target") instance=ExtResource("16_kd2d1")]
+position = Vector2(1560, 258)
+target = NodePath("../../player")
 
 [node name="enemy" parent="enemies" instance=ExtResource("5_33txv")]
 position = Vector2(451, 188)
@@ -433,7 +434,7 @@ position = Vector2(645, 219)
 position = Vector2(496, 192)
 
 [node name="player" parent="." instance=ExtResource("3_3ujn7")]
-position = Vector2(1504, 192)
+position = Vector2(1504, 193)
 
 [node name="background" type="ParallaxBackground" parent="."]
 scroll_offset = Vector2(-380.853, 345.864)

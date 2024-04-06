@@ -79,7 +79,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_isqdj"]
-size = Vector2(12, 12)
+size = Vector2(12, 13)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wn44j"]
 size = Vector2(16, 12)
@@ -100,12 +100,10 @@ autoplay = "idle"
 [node name="animator" type="AnimationPlayer" parent="."]
 
 [node name="collision" type="CollisionShape2D" parent="."]
-visible = false
-position = Vector2(0, 8)
+position = Vector2(0, 8.5)
 shape = SubResource("RectangleShape2D_isqdj")
 
 [node name="hurtbox" type="Area2D" parent="."]
-visible = false
 collision_layer = 0
 collision_mask = 4
 
@@ -115,18 +113,6 @@ shape = SubResource("RectangleShape2D_wn44j")
 debug_color = Color(0.980392, 0, 0.380392, 0.419608)
 
 [node name="remote" type="RemoteTransform2D" parent="."]
-
-[node name="ray_right" type="RayCast2D" parent="."]
-position = Vector2(8, 13)
-target_position = Vector2(4, 0)
-collision_mask = 4
-hit_from_inside = true
-
-[node name="ray_left" type="RayCast2D" parent="."]
-position = Vector2(-8, 13)
-target_position = Vector2(-4, 0)
-collision_mask = 4
-hit_from_inside = true
 
 [node name="head_collider" type="Area2D" parent="."]
 collision_layer = 0

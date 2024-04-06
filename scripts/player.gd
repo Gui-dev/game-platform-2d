@@ -11,12 +11,11 @@ var fall_gravity
 var is_jumping := false
 var knockback_vector := Vector2.ZERO
 var is_hurted := false
+var knockback_power: int = 20
 @export var jump_height := 64
 @export var max_time_to_peak := 0.5
 @onready var animation := $animated as AnimatedSprite2D
 @onready var remote_transform := $remote as RemoteTransform2D
-@onready var ray_right = $ray_right as RayCast2D
-@onready var ray_left = $ray_left as RayCast2D
 @onready var jump_sfx = $jump_sfx as AudioStreamPlayer
 @onready var destroy_sfx = preload("res://prefabs/destroy_sfx.tscn")
 signal player_has_died()
@@ -66,11 +65,12 @@ func _physics_process(delta) -> void:
       collision.get_collider().has_colleded_with(collision, self)
 
 
-func _on_hurtbox_body_entered(_body: Node2D) -> void:
-  if ray_right.is_colliding():
-    take_damage(Vector2(-200, -200))
-  elif ray_left.is_colliding():
-    take_damage(Vector2(200, -200))
+func _on_hurtbox_body_entered(body: Node2D) -> void:
+  var knockback = Vector2((global_position.x - body.global_position.x) * knockback_power, -200)
+  take_damage(knockback)
+  
+  if body.is_in_group("fireball"):
+    body.queue_free()
 
 
 func follow_camera(camera: Camera2D) -> void:

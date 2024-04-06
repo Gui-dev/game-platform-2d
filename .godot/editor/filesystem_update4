@@ -1,6 +1,12 @@
-res://enemies/trex.tscn
+res://actors/player.tscn
 res://shaders/movement_clouds.gdshader
 res://shaders/transition.gdshader
-res://scripts/trex.gd
+res://scripts/player.gd
 res://levels/world_01.tscn
-res://actors/player.tscn
+res://enemies/trex.tscn
+res://prefabs/fireball.tscn
+res://enemies/enemy.tscn
+res://scripts/trex.gd
+res://enemies/cherry.tscn
+res://prefabs/hitbox.tscn
+res://scripts/hitbox.gd
